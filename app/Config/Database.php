@@ -18,7 +18,7 @@ class Database extends \CodeIgniter\Database\Config
 
 	/**
 	 * Lets you choose which connection group to
-	 * use if no other is specified.
+	 * use if no other is specified
 	 *
 	 * @var string
 	 */
