@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Codeigniter 4 CRUD - Edit User Demo</title>
+  <title>Editar usuario</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <style>
     .container {
@@ -25,17 +25,17 @@
       <input type="hidden" name="id" id="id" value="<?php echo $user_obj['id']; ?>">
 
       <div class="form-group">
-        <label>Name</label>
+        <label>Nome</label>
         <input type="text" name="name" class="form-control" value="<?php echo $user_obj['name']; ?>">
       </div>
 
       <div class="form-group">
-        <label>Email</label>
+        <label>E-mail</label>
         <input type="email" name="email" class="form-control" value="<?php echo $user_obj['email']; ?>">
       </div>
 
       <div class="form-group">
-        <button type="submit" class="btn btn-danger btn-block">Save Data</button>
+        <button type="submit" class="btn btn-danger btn-block">Salvar</button>
       </div>
     </form>
   </div>
@@ -58,12 +58,12 @@
         },
         messages: {
           name: {
-            required: "Name is required.",
+            required: "É necessario informar um nome!.",
           },
           email: {
-            required: "Email is required.",
-            email: "It does not seem to be a valid email.",
-            maxlength: "The email should be or equal to 60 chars.",
+            required: "É necessário informar um E-mail.",
+            email: "O E-mail informado não é valido.",
+            maxlength: "o e-mail nao deve ser maior do que 60 caracteres.",
           },
         },
       })

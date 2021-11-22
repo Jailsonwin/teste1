@@ -23,17 +23,17 @@
     <form method="post" id="add_create" name="add_create" 
     action="<?= site_url('/submit-form') ?>">
       <div class="form-group">
-        <label>Name</label>
+        <label>Nome</label>
         <input type="text" name="name" class="form-control">
       </div>
 
       <div class="form-group">
-        <label>Email</label>
+        <label>E-mail</label>
         <input type="text" name="email" class="form-control">
       </div>
 
       <div class="form-group">
-        <button type="submit" class="btn btn-primary btn-block">Update Data</button>
+        <button type="submit" class="btn btn-primary btn-block">Salvar</button>
       </div>
     </form>
   </div>
@@ -56,12 +56,12 @@
         },
         messages: {
           name: {
-            required: "Name is required.",
+            required: "É necessario informar um nome!.",
           },
           email: {
-            required: "Email is required.",
-            email: "It does not seem to be a valid email.",
-            maxlength: "The email should be or equal to 60 chars.",
+            required: "É necessário informar um E-mail.",
+            email: "O E-mail informado não é valido.",
+            maxlength: "o e-mail nao deve ser maior do que 60 caracteres.",
           },
         },
       })

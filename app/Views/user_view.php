@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-br">
   <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Codeigniter 4 CRUD App Example - positronx.io</title>
+  <title>CRUD CodeIgniter</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 </head>
 <body>
 
 <div class="container mt-4">
     <div class="d-flex justify-content-end">
-        <a href="<?php echo site_url('/user-form') ?>" class="btn btn-success mb-2">Add User</a>
+        <a href="<?php echo site_url('/user-form') ?>" class="btn btn-success mb-2">Adicionar Usuario</a>
 	</div>
     <?php
      if(isset($_SESSION['msg'])){
@@ -21,10 +21,10 @@
      <table class="table table-bordered" id="users-list">
        <thead>
           <tr>
-             <th>User Id</th>
-             <th>Name</th>
-             <th>Email</th>
-             <th>Action</th>
+             <th>ID</th>
+             <th>Nome</th>
+             <th>E-mail</th>
+             <th>Ação</th>
           </tr>
        </thead>
        <tbody>
@@ -35,8 +35,8 @@
              <td><?php echo $user['name']; ?></td>
              <td><?php echo $user['email']; ?></td>
              <td>
-              <a href="<?php echo base_url('edit-view/'.$user['id']);?>" class="btn btn-primary btn-sm">Edit</a>
-              <a href="<?php echo base_url('delete/'.$user['id']);?>" class="btn btn-danger btn-sm">Delete</a>
+              <a href="<?php echo base_url('edit-view/'.$user['id']);?>" class="btn btn-primary btn-sm">Editar</a>
+              <a href="<?php echo base_url('delete/'.$user['id']);?>" class="btn btn-danger btn-sm">Excluir</a>
               </td>
           </tr>
          <?php endforeach; ?>
