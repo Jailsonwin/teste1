@@ -1,6 +1,7 @@
 <?php 
 namespace App\Controllers;
 use App\Models\UserModel;
+use App\Models\EquipeModel;
 use CodeIgniter\Controller;
 
 class UserCrud extends Controller
@@ -17,7 +18,7 @@ class UserCrud extends Controller
         return view('add_user');
     }
  
-    // insert data into database
+    //insert data into database
     public function store() {
         $userModel = new UserModel();
         $data = [
@@ -27,6 +28,8 @@ class UserCrud extends Controller
         $userModel->insert($data);
         return $this->response->redirect(site_url('/users-list'));
     }
+
+
 
     // show single user
     public function singleUser($id = null){

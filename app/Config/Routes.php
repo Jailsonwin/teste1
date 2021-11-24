@@ -17,7 +17,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  */
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
-$routes->setDefaultMethod('index');
+$routes->setDefaultMethod('');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
@@ -30,15 +30,19 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // Route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
-
-// CRUD RESTful Routes
-$routes->get('users-list', 'UserCrud::index');
+$routes->get('/users-list', 'UserCrud::index');
 $routes->get('user-form', 'UserCrud::create');
 $routes->post('submit-form', 'UserCrud::store');
 $routes->get('edit-view/(:num)', 'UserCrud::singleUser/$1');
 $routes->post('update', 'UserCrud::update');
 $routes->get('delete/(:num)', 'UserCrud::delete/$1');
+
+$routes->get('/equipes-list', 'EquipeController::index');
+$routes->get('equipe-form', 'EquipeController::create');
+$routes->post('equipe-submit-form', 'EquipeController::store');
+$routes->get('equipe-edit-view/(:num)', 'EquipeController::singleEquipe/$1');
+$routes->post('equipe-update', 'EquipeController::update');
+$routes->get('equipe-delete/(:num)', 'EquipeController::delete/$1');
 
 /**
  * --------------------------------------------------------------------
