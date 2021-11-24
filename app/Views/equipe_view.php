@@ -10,10 +10,15 @@
 
 <div class="container mt-4">
     <div class="d-flex justify-content-end">
-        <a href="<?php echo site_url('/equipe-form') ?>" class="btn btn-success mb-2">Adicionar Usuario</a>
+        <a href="<?php echo site_url('/equipe-form') ?>" class="btn btn-success mb-2">Adicionar Equipe</a>
 	</div>
+  <?php
+     if(isset($_SESSION['msg'])){
+        echo $_SESSION['msg'];
+      }
+     ?>
   <div class="mt-3">
-     <table class="table table-bordered">
+     <table class="table table-bordered" id="equipes-list">
        <thead>
           <tr>
              <th>ID</th>
