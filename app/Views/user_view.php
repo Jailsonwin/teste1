@@ -8,17 +8,29 @@
 </head>
 <body>
 
+<style>
+#btn-home{
+   position:relative;
+   width: 5rem;
+}
+</style>
+
 <div class="container mt-4">
     <div class="d-flex justify-content-end">
         <a href="<?php echo site_url('/user-form') ?>" class="btn btn-success mb-2">Adicionar Usuario</a>
 	</div>
+
+   <div class="d-flex justify-content">
+         <a id="btn-home" class="btn btn-primary btn-block" href="home"> HOME </a>
+	</div>
+
     <?php
      if(isset($_SESSION['msg'])){
         echo $_SESSION['msg'];
       }
      ?>
   <div class="mt-3">
-     <table class="table table-bordered" id="users-list">
+     <table class="table table-hover" id="users-list">
        <thead>
           <tr>
              <th>ID</th>

@@ -8,17 +8,30 @@
 </head>
 <body>
 
+<style>
+#btn-home{
+   position:relative;
+   width: 5rem;
+}
+</style>
+
 <div class="container mt-4">
     <div class="d-flex justify-content-end">
         <a href="<?php echo site_url('/equipe-form') ?>" class="btn btn-success mb-2">Adicionar Equipe</a>
 	</div>
+
+   <div class="d-flex justify-content">
+         <a id="btn-home" class="btn btn-primary btn-block" href="home"> HOME </a>
+	</div>
+
   <?php
      if(isset($_SESSION['msg'])){
         echo $_SESSION['msg'];
       }
      ?>
   <div class="mt-3">
-     <table class="table table-bordered" id="equipes-list">
+     <table class="table table-hover" id="equipes-list">
+
        <thead>
           <tr>
              <th>ID</th>
@@ -47,7 +60,7 @@
      </table>
   </div>
 </div>
- 
+   
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
 <script type="text/javascript" src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>

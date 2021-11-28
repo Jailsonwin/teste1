@@ -44,6 +44,8 @@ $routes->get('equipe-edit-view/(:num)', 'EquipeController::singleEquipe/$1');
 $routes->post('equipe-update', 'EquipeController::update');
 $routes->get('equipe-delete/(:num)', 'EquipeController::delete/$1');
 
+$routes->get('home', 'Home::index');
+
 /**
  * --------------------------------------------------------------------
  * Additional Routing
