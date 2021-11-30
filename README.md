@@ -1,4 +1,14 @@
-# codeigniter-crud-example
-Create CRUD operations in Codeigniter 4 application. We will also shed light on how to integrate Bootstrap 4 and display data using Datatables jQuery plug-in.
+# Como instalar e rodar o CRUD
 
-[Codeigniter 4 CRUD with Bootstrap and MySQL Example](https://www.positronx.io/codeigniter-crud-with-bootstrap-and-mysql-example/)
+Como Instalar e Clonar o Projeto
+
+Cria o projeto com o comando: composer create-project codeigniter4/appstarter teste1
+
+Após criar o projeto roda o comando: composer update
+Faz o clone do projeto com o comando; git clone https://github.com/Jailsonwin/teste1.git
+Renomeia o arquivo env para .env e altera a linha # CI_ENVIRONMENT = production para CI_ENVIRONMENT = development
+Configura o .env de acordo com o seu banco de dados.
+
+Após Configurar o Banco de Dados, roda o comando php spark migrate
+
+Para Rodar o Projeto no Servidor e testar utilize o comando: php spark serve
